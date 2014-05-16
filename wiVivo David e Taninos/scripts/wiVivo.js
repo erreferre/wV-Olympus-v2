@@ -9,8 +9,6 @@ function onDeviceReady() {
     document.addEventListener("backbutton", exitAppPopup, false);
     window.plugins.powerManagement.acquire();
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFileSystemError);
-    //document.getElementById("tabstrip-selfie").style.backgroundColor = "#FF0000";
-    //document.getElementById("tabstrip-selfie").style.backgroundImage = './imagenes/vela.gif';
     startConsultaServidor();
 };
 
