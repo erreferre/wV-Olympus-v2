@@ -61,9 +61,6 @@ function startColorines(){
 	        intermitenciaColorines = val.intermitencia;
             startcolorinessettimeout = val.startColorinessetTimeout;
             startcolorinessetinterval = val.startColorinessetInterval;
-    	    //mostrará uno de los dos colores posibles
-        	//var colores_tmp = [val.color1,val.color2];
-        	//var tmp = colores_tmp[colorColorines];
             if (intermitenciaColorines === 0) {
         		coloresColorines = val.color1;    
                 if (repeColorines1Colorines !== null) clearInterval(repeColorines1Colorines);
@@ -97,7 +94,6 @@ function startColorines(){
         	if (intermitenciaColorines === 3) {
                 if (repeColorines1Colorines !== null) clearInterval(repeColorines1Colorines);
             	coloresColorines = ["#000000","#000001"];
-            	//document.getElementById("pantalla_colorines").style.backgroundColor = colorseleccionadoColorines;
                 //document.getElementById("pantalla_colorines").style.display = 'block';
                 document.getElementById("pantalla_colorines").style.backgroundPosition="top right";
                 document.getElementById("pantalla_colorines").style.backgroundRepeat="no-repeat";
@@ -141,7 +137,7 @@ function stopColorines(){
 
 function cerrarColorines(){
     stopColorines();
-    window.plugins.orientationLock.unlock();
+    //window.plugins.orientationLock.unlock();
     window.plugins.powerManagement.release();
     brightness.setBrightness(brillo, function(status){},function(status){});
 	window.location.href='index.html#tabstrip-show';
