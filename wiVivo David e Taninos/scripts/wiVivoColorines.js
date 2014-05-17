@@ -12,6 +12,10 @@ function onDeviceReadyColorines() {
     brightness.getBrightness(function(status){brillo = status;},function(status){});
     brightness.setBrightness('1.0', function(status){},function(status){});
     window.plugins.powerManagement.acquire();
+    //var pantallahorizontal = [{landscaperight:true}];
+    //cordova.exec(null, null, "Orientation", "setOrientation", options);
+    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+    window.plugins.orientationLock.lock("landscape");
     startColorines();
 };
 
@@ -90,7 +94,7 @@ function startColorines(){
                 document.getElementById("pantalla_colorines").style.backgroundPosition="top right";
                 document.getElementById("pantalla_colorines").style.backgroundRepeat="no-repeat";
                 document.getElementById("pantalla_colorines").style.backgroundSize="100%";
-                document.getElementById("pantalla_colorines").style.backgroundImage = "url('./imagenes/bengala.gif')";
+                document.getElementById("pantalla_colorines").style.backgroundImage = "url('./imagenes/bengala2.gif')";
         	}
     	});
         errordetectadoColorines = 0;
@@ -119,12 +123,12 @@ function stopColorines(){
         clearTimeout(repeColorines2Colorines);
         repeColorines2Colorines = null;
     }
-    //brightness.setKeepScreenOn(false);
-    window.plugins.powerManagement.release();
 }
 
 function cerrarColorines(){
     stopColorines();
+    window.plugins.orientationLock.unlock();
+    window.plugins.powerManagement.release();
     brightness.setBrightness(brillo, function(status){},function(status){});
 	window.location.href='index.html#tabstrip-show';
 }
