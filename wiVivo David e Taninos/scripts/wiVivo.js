@@ -14,9 +14,9 @@ function onDeviceReady() {
 
 //variables Globales
 //CAMBIAR PARA COMPILAR RELEASE
-//var servidor_wivivo = 'http://srv001.liveshowsync.local';
-var servidor_wivivo = 'http://192.168.10.155';
-alert (servidor_wivivo);
+var servidor_wivivo = 'http://srv001.liveshowsync.local';
+//var servidor_wivivo = 'http://192.168.10.155';
+//alert (servidor_wivivo);
 var webservice_wivivo = servidor_wivivo + '/liveshowsync/'; 
 
 var servidor_lee = webservice_wivivo + 'lee.php';
