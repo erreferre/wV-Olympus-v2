@@ -14,8 +14,8 @@ function onDeviceReadyColorines() {
     window.plugins.powerManagement.acquire();
     //var pantallahorizontal = [{landscaperight:true}];
     //cordova.exec(null, null, "Orientation", "setOrientation", options);
-    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-    window.plugins.orientationLock.lock("landscape");
+    //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+    //window.plugins.orientationLock.lock("landscape");
     startColorines();
 };
 
