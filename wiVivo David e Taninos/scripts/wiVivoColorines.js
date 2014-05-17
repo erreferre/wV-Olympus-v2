@@ -62,15 +62,18 @@ function startColorines(){
             startcolorinessettimeout = val.startColorinessetTimeout;
             startcolorinessetinterval = val.startColorinessetInterval;
     	    //mostrará uno de los dos colores posibles
-        	var colores_tmp = [val.color1,val.color2];
-        	var tmp = colores_tmp[colorColorines];
+        	//var colores_tmp = [val.color1,val.color2];
+        	//var tmp = colores_tmp[colorColorines];
             if (intermitenciaColorines === 0) {
-        		coloresColorines = tmp;    
+        		coloresColorines = val.color1;    
                 if (repeColorines1Colorines !== null) clearInterval(repeColorines1Colorines);
+                document.getElementById("pantalla_colorines").style.backgroundImage = "none";
             	colorseleccionadoColorines = coloresColorines;
             	document.getElementById("pantalla_colorines").style.backgroundColor = colorseleccionadoColorines;
         	}
         	if (intermitenciaColorines === 1) {
+                if (repeColorines1Colorines !== null) clearInterval(repeColorines1Colorines);
+                document.getElementById("pantalla_colorines").style.backgroundImage = "none";
 	    		coloresColorines = ["#FFFFFF",tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp];
         		repeColorines1Colorines = setInterval(function() {
         			var indice = Math.floor(Math.random() * coloresColorines.length);
@@ -79,6 +82,8 @@ function startColorines(){
 	        	}, startcolorinessetinterval);    
        	 	}
         	if (intermitenciaColorines === 2) {
+                if (repeColorines1Colorines !== null) clearInterval(repeColorines1Colorines);
+                document.getElementById("pantalla_colorines").style.backgroundImage = "none";
         		coloresColorines = [val.color1,val.color2];
         		repeColorines1Colorines = setInterval(function() {
         			var indice = Math.floor(Math.random() * coloresColorines.length);
@@ -88,13 +93,19 @@ function startColorines(){
         	}
         	if (intermitenciaColorines === 3) {
                 if (repeColorines1Colorines !== null) clearInterval(repeColorines1Colorines);
-            	colorseleccionadoColorines = "#000000";
-            	document.getElementById("pantalla_colorines").style.backgroundColor = colorseleccionadoColorines;
+            	coloresColorines = ["#000000","#000001"];
+            	//document.getElementById("pantalla_colorines").style.backgroundColor = colorseleccionadoColorines;
                 //document.getElementById("pantalla_colorines").style.display = 'block';
                 document.getElementById("pantalla_colorines").style.backgroundPosition="top right";
                 document.getElementById("pantalla_colorines").style.backgroundRepeat="no-repeat";
                 document.getElementById("pantalla_colorines").style.backgroundSize="100%";
                 document.getElementById("pantalla_colorines").style.backgroundImage = "url('./imagenes/bengala2.gif')";
+                var espar = 0;
+                repeColorines1Colorines = setInterval(function() {
+                    if (espar === 0) {espar = 1;} else {espar = 0;}
+            		colorseleccionadoColorines = coloresColorines[espar];
+                    document.getElementById("pantalla_colorines").style.backgroundColor = colorseleccionadoColorines;
+	        	}, startcolorinessetinterval);
         	}
     	});
         errordetectadoColorines = 0;
