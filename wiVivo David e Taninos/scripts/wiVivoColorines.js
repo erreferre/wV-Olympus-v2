@@ -74,7 +74,7 @@ function startColorines(){
         	if (intermitenciaColorines === 1) {
                 if (repeColorines1Colorines !== null) clearInterval(repeColorines1Colorines);
                 document.getElementById("pantalla_colorines").style.backgroundImage = "none";
-	    		coloresColorines = ["#FFFFFF",tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp];
+	    		coloresColorines = [val.color2,val.color1,val.color1,val.color1,val.color1,val.color1,val.color1,val.color1,val.color1,val.color1,val.color1,val.color1,val.color1,val.color1];
         		repeColorines1Colorines = setInterval(function() {
         			var indice = Math.floor(Math.random() * coloresColorines.length);
             		colorseleccionadoColorines = coloresColorines[indice];
@@ -85,9 +85,12 @@ function startColorines(){
                 if (repeColorines1Colorines !== null) clearInterval(repeColorines1Colorines);
                 document.getElementById("pantalla_colorines").style.backgroundImage = "none";
         		coloresColorines = [val.color1,val.color2];
+                var esimpar = 0;
         		repeColorines1Colorines = setInterval(function() {
-        			var indice = Math.floor(Math.random() * coloresColorines.length);
-            		colorseleccionadoColorines = coloresColorines[indice];
+        			if (esimpar === 0) {esimpar = 1;} else {esimpar = 0;}
+            		colorseleccionadoColorines = coloresColorines[esimpar];
+                    //var indice = Math.floor(Math.random() * coloresColorines.length);
+            		//colorseleccionadoColorines = coloresColorines[indice];
             		document.getElementById("pantalla_colorines").style.backgroundColor = colorseleccionadoColorines;
 	        	}, startcolorinessetinterval);    
         	}
