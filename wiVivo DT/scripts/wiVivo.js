@@ -106,7 +106,7 @@ function startConsultaServidor() {
 //        			onclick="mensajeAplausoActivado();if (repeConsultaServidor1===null) startConsultaServidor();">\
 //                	<h1>::::::::::::::::::::::::::<br/>comodidade<br/>::::::::::::::::::::::::::<br/></h1></button></p>';
                     newHTMLshowb3 = '<p><button width="100%" class="boton-negro boton-centro boton-text-all-color" type="button" \
-        			onclick="window.open(\'loteria.html\';">\
+        			onclick="window.open(\'loteria.html\');">\
         			<h1>::::::::::::::::::::::::::<br/>lotaria<br/>::::::::::::::::::::::::::<br/></h1></button></p>';
                     newHTMLshowb4 = '<p><button width="100%" class="boton-negro boton-centro boton-text-all-color" type="button" \
         			onclick="window.location.href=\'#tabstrip-selfie\';if (repeSelfie1===null) startSelfie();">\
