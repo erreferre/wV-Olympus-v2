@@ -13,11 +13,10 @@ function onDeviceReady() {
 };
 
 //variables Globales
-//CAMBIAR PARA COMPILAR RELEASE
-var servidor_wivivo = 'http://srv001.liveshowsync.local';
-//var servidor_wivivo = 'http://192.168.10.155';
+//var servidor_wivivo = 'http://srv001.liveshowsync.local';
+var servidor_wivivo = 'http://aerowi.ddns.net';
 //alert (servidor_wivivo);
-var webservice_wivivo = servidor_wivivo + '/liveshowsync/'; 
+var webservice_wivivo = servidor_wivivo + '/david/'; 
 
 var servidor_lee = webservice_wivivo + 'lee.php';
 var servidor_selfie = webservice_wivivo + 'leeThumbs.php';
@@ -45,11 +44,11 @@ var repeSelfie1 = null;
 var filePath = null;
 
 function onFileSystemSuccess(fileSystem) {
-        if (device.platform === 'Android'){
-        	filePath = fileSystem.root.fullPath+'\/'+'DavidAmorSelfie_';
-    	} else {
-			filePath = fileSystem.root.fullPath+"\/"+'DavidAmorSelfie_';
-    	}
+        //if (device.platform === 'Android'){
+        	filePath = fileSystem.root.fullPath+'\/'+'DT_selfie_';
+    	//} else {
+		//	filePath = fileSystem.root.fullPath+"\/"+'DavidAmorSelfie_';
+    	//}
 };
 
 function onFileSystemError(error) {

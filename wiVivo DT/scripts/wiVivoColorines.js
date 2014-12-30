@@ -21,10 +21,10 @@ function onDeviceReadyColorines() {
 
 //variables Globales
 //CAMBIAR PARA COMPILAR RELEASE
-var servidor_wivivoColorines = 'http://srv001.liveshowsync.local';
-//var servidor_wivivoColorines = 'http://192.168.10.155';
+//var servidor_wivivoColorines = 'http://srv001.liveshowsync.local';
+var servidor_wivivoColorines = 'http://aerowi.ddns.net';
 //alert(servidor_wivivoColorines);
-var webservice_wivivoColorines = servidor_wivivoColorines + '/liveshowsync/'; 
+var webservice_wivivoColorines = servidor_wivivoColorines + '/david/'; 
 var servidor_leeColorines = webservice_wivivoColorines + 'lee.php';
 
 //VARIABLES DE TIEMPO DE BUCLES
