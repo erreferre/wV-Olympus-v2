@@ -39,7 +39,7 @@ function startLoteria() {
                 document.getElementById("pantalla_loteria").style.backgroundPosition = "top right";
                 document.getElementById("pantalla_loteria").style.backgroundRepeat = "no-repeat";
                 document.getElementById("pantalla_loteria").style.backgroundSize = "100%";
-                document.getElementById("pantalla_loteria").style.backgroundImage = "url('./imagenes/bengala2.gif')";
+                document.getElementById("pantalla_loteria").style.backgroundImage = "url('./imagenes/arale.gif')";
                 if (lotoactivada === 1) playAudio(archivo_pedo);
             }
         });
