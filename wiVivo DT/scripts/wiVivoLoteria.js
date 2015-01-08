@@ -39,8 +39,13 @@ function startLoteria() {
                 document.getElementById("pantalla_loteria").style.backgroundPosition = "top right";
                 document.getElementById("pantalla_loteria").style.backgroundRepeat = "no-repeat";
                 document.getElementById("pantalla_loteria").style.backgroundSize = "100%";
-                document.getElementById("pantalla_loteria").style.backgroundImage = "url('./imagenes/arale.gif')";
+                document.getElementById("pantalla_loteria").style.backgroundImage = "url('./imagenes/arale.jpeg')";
                 if (lotoactivada === 1) playAudio(archivo_pedo);
+            } else {
+                document.getElementById("pantalla_loteria").style.backgroundPosition = "top right";
+                document.getElementById("pantalla_loteria").style.backgroundRepeat = "no-repeat";
+                document.getElementById("pantalla_loteria").style.backgroundSize = "100%";
+                document.getElementById("pantalla_loteria").style.backgroundImage = "url('./imagenes/loteria.gif')";
             }
         });
     });
