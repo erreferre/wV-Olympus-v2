@@ -23,7 +23,7 @@ function onDeviceReadyColorines() {
 //var servidor_wivivoColorines = 'http://srv001.liveshowsync.local';
 var servidor_wivivoColorines = 'http://aerowi.ddns.net';
 //alert(servidor_wivivoColorines);
-var webservice_wivivoColorines = servidor_wivivoColorines + '/david/'; 
+var webservice_wivivoColorines = servidor_wivivoColorines + '/olympus/'; 
 var servidor_leeColorines = webservice_wivivoColorines + 'lee.php';
 
 //VARIABLES DE TIEMPO DE BUCLES

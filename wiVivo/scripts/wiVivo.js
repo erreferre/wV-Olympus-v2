@@ -16,7 +16,7 @@ function onDeviceReady() {
 //var servidor_wivivo = 'http://srv001.liveshowsync.local';
 var servidor_wivivo = 'http://aerowi.ddns.net';
 //alert (servidor_wivivo);
-var webservice_wivivo = servidor_wivivo + '/david/';
+var webservice_wivivo = servidor_wivivo + '/olympus/';
 
 var servidor_lee = webservice_wivivo + 'lee.php';
 var servidor_selfie = webservice_wivivo + 'leeThumbs.php';
@@ -63,15 +63,6 @@ var showcomenzado = 0;
 var errordetectado = 0;
 var errornotificaciones = 0;
 var alertasactivadas = 1;
-
-// muestra variables para depuracion
-//function mostrarVariables(){
-//    navigator.notification.alert("repeAplauso1:"+repeAplauso1+"\n aplausoechado:"+aplausoechado+"\n aplausoactivado:"+aplausoactivado+"\n ganador:"+
-//		ganador+"\n lotoactivada:"+lotoactivada+"\ loto:"+loto+"\n repeLoto1:"+repeLoto1+"\n color:"+color+"\n colores:"+
-//    	colores+"\n colorseleccionado:"+colorseleccionado+"\n intermitencia:"+intermitencia+"\ repeColorines1:"+repeColorines1+
-//    	"\n repeColorines2:"+repeColorines2+"\n checkconexion:"+checkconexion,"INFO","INFO","OK");
-//};
-
 
 // Se lanza onDeviceready
 // chequea conexion, habilita los botones, popup alerta indicando que empezamos, espera sonidos.
@@ -211,7 +202,7 @@ function startSelfie() {
         	Poderás gardalas con alta calidade no teu móbil pulsando sobre as que che gusten.</h2></button>';
     document.getElementById("div-comienzaShow-selfie2").innerHTML = newHTMLselfie2;
     if (tiposelfie === 1) {
-        var newHTMLtmp1 = '<img src="./imagenes/lafoto.jpg" width="100%" />';
+        var newHTMLtmp1 = '<img src="./imagenes/portada.png" width="100%" />';
         document.getElementById("tabstrip-selfie-fotos").innerHTML = newHTMLtmp1;
     } else if (tiposelfie === 2) {
         $.getJSON(servidor_selfie)

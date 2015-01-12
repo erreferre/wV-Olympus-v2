@@ -12,7 +12,7 @@ function onDeviceReadyLoteria() {
 //variables Globales
 //var servidor_wivivoLoteria = 'http://srv001.liveshowsync.local';
 var servidor_wivivoLoteria = 'http://aerowi.ddns.net';
-var webservice_wivivoLoteria = servidor_wivivoLoteria + '/david/';
+var webservice_wivivoLoteria = servidor_wivivoLoteria + '/olympus/';
 var servidor_leeLoteria = webservice_wivivoLoteria + 'leeLoteria.php';
 
 //variables Loto
