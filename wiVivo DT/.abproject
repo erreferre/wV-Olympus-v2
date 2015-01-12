@@ -35,7 +35,7 @@
     "ID_RESOLUTION_WXGA",
     "ID_RESOLUTION_HD720P"
   ],
-  "BundleVersion": "11.0",
+  "BundleVersion": "12.0",
   "DisplayName": "wiVivo DT",
   "iOSDisplayName": "",
   "Description": "wiVivo David Amor e Taninos Maduros",
@@ -45,7 +45,7 @@
     "2"
   ],
   "iOSBackgroundMode": [],
-  "AndroidVersionCode": "11",
+  "AndroidVersionCode": "12",
   "WP8Requirements": [],
   "WP8Capabilities": [
     "ID_CAP_MEDIALIB_AUDIO",
