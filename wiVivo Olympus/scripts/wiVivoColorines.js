@@ -91,6 +91,7 @@ function startColorines(){
 	        	}, startcolorinessetinterval);    
         	}
         	if (intermitenciaColorines === 3) {
+                window.plugins.orientationLock.lock("landscape");
                 if (repeColorines1Colorines !== null) clearInterval(repeColorines1Colorines);
             	coloresColorines = ["#000000","#000001"];
                 //document.getElementById("pantalla_colorines").style.display = 'block';
@@ -135,6 +136,7 @@ function stopColorines(){
 }
 
 function cerrarColorines(){
+    window.plugins.orientationLock.unlock();
     stopColorines();
     //window.plugins.orientationLock.unlock();
     window.plugins.powerManagement.release();

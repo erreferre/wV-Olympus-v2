@@ -8,6 +8,7 @@ function onDeviceReady() {
     //document.addEventListener("backbutton", irShow, false);
     document.addEventListener("backbutton", exitAppPopup, false);
     window.plugins.powerManagement.acquire();
+    window.plugins.orientationLock.unlock();
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFileSystemError);
     startConsultaServidor();
 };
