@@ -45,7 +45,7 @@ function startLoteria() {
                 document.getElementById("pantalla_loteria").style.backgroundPosition = "top right";
                 document.getElementById("pantalla_loteria").style.backgroundRepeat = "no-repeat";
                 document.getElementById("pantalla_loteria").style.backgroundSize = "100%";
-                document.getElementById("pantalla_loteria").style.backgroundImage = "url('./imagenes/banana.gif')";
+//                document.getElementById("pantalla_loteria").style.backgroundImage = "url('./imagenes/banana.gif')";
             }
         });
     });
