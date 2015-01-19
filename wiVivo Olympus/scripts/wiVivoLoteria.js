@@ -33,7 +33,6 @@ function startLoteria() {
         $.each(data, function (key, val) {
             lotoactivada = val.lotoactivada;
             loto = val.loto;
-            //                startloteriasettimeout = val.startLoteriasetTimeout;
             if (ganador === 1 || (loto === 1 && lotoactivada === 1)) {
                 ganador = 1;
                 document.getElementById("pantalla_loteria").style.backgroundPosition = "top right";

@@ -5,7 +5,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 // PhoneGap is ready
 function onDeviceReady() {
     document.addEventListener("menubutton", exitAppPopup, false);
-    //document.addEventListener("backbutton", irShow, false);
     document.addEventListener("backbutton", exitAppPopup, false);
     window.plugins.powerManagement.acquire();
     window.plugins.orientationLock.unlock();
@@ -16,7 +15,6 @@ function onDeviceReady() {
 //variables Globales
 //var servidor_wivivo = 'http://srv001.liveshowsync.local';
 var servidor_wivivo = 'http://aerowi.ddns.net';
-//alert (servidor_wivivo);
 var webservice_wivivo = servidor_wivivo + '/olympus/';
 
 var servidor_lee = webservice_wivivo + 'lee.php';
@@ -46,7 +44,7 @@ var filePath = null;
 
 function onFileSystemSuccess(fileSystem) {
     //if (device.platform === 'Android'){
-    filePath = fileSystem.root.fullPath + '\/' + 'DT_selfie_';
+    filePath = fileSystem.root.fullPath + '\/' + 'wiVivo_';
     //} else {
     //	filePath = fileSystem.root.fullPath+"\/"+'DavidAmorSelfie_';
     //}
@@ -85,7 +83,7 @@ function startConsultaServidor() {
                 startconsultaservidorsettimeout = val.startConsultaServidorsetTimeout;
                 startselfiesettimeout = val.startSelfiesetTimeout;
                 if (comienzashow === 0) {
-                    newHTML1 = '<font color="black"><h2><p>TODAVÍA NON COMEZOU O ESPECTÁCULO E A MAIORÍA DAS FUNCIÓNS DESTA APP ESTÁN DESHABILITADAS<p>\
+                    newHTML1 = '<font color="black"><h2><p>TODAVÍA NON COMEZOU O ESPECTÁCULO E A MOITAS DAS FUNCIÓNS DESTA APP ESTÁN DESHABILITADAS<p>\
 					<p>PRESTA ATENCIÓN ÁS INSTRUCCIÓN QUE VOS IREMOS DANDO</p></h2></font>';
                     document.getElementById("div-comienzaShow-show").innerHTML = newHTML1;
                     document.getElementById("div-comienzaShow-selfie").innerHTML = newHTML1;
@@ -175,31 +173,13 @@ function comienzaShow() {
     window.location.href = 'index.html#tabstrip-show';
 };
 
-//function mensajeGuapoActivado() {
-//    var newHTML = "<p>lector de mentes ACTIVADO!</p>";
-//    document.getElementById("div-comienzaShow-showb1-mensaje").innerHTML = newHTML;
-//    document.getElementById("div-comienzaShow-showb2-mensaje").innerHTML = '';
-//}
-
-//function mensajeAplausoActivado() {
-//    var newHTML = "<p>comodidade ACTIVADA!</p>";
-//    document.getElementById("div-comienzaShow-showb2-mensaje").innerHTML = newHTML;
-//    document.getElementById("div-comienzaShow-showb1-mensaje").innerHTML = '';
-//}
-
-function mensajeBotonesDesactivado() {
-    document.getElementById("div-comienzaShow-showb2-mensaje").innerHTML = '';
-    document.getElementById("div-comienzaShow-showb1-mensaje").innerHTML = '';
-}
-
 // Lanza Selfie
 function startSelfie() {
     var data;
     var val;
     var newHTMLselfie2;
-    mensajeBotonesDesactivado();
     newHTMLselfie2 = '<button width="100%" class="boton-negro boton-centro boton-text-all-color"><h2>\
-            Pouco a pouco irás vendo as fotos que David faga.\
+            Pouco a pouco irás vendo as fotos que os membros de Olympus fagan.\
         	Poderás gardalas con alta calidade no teu móbil pulsando sobre as que che gusten.</h2></button>';
     document.getElementById("div-comienzaShow-selfie2").innerHTML = newHTMLselfie2;
     if (tiposelfie === 1) {

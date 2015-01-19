@@ -6,23 +6,16 @@ document.addEventListener("deviceready", onDeviceReadyColorines, false);
 function onDeviceReadyColorines() {
     document.addEventListener("menubutton", cerrarColorines, false);
     document.addEventListener("backbutton", cerrarColorines, false);
-    //document.addEventListener("backbutton", exitAppPopupColorines, false);
     window.brightness = cordova.require("cordova.plugin.Brightness.Brightness");
-    //brightness.setKeepScreenOn(true);
     brightness.getBrightness(function(status){brillo = status;},function(status){});
     brightness.setBrightness('1.0', function(status){},function(status){});
     window.plugins.powerManagement.acquire();
-    //var pantallahorizontal = [{landscaperight:true}];
-    //cordova.exec(null, null, "Orientation", "setOrientation", options);
-    //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-    //window.plugins.orientationLock.lock("landscape");
     startColorines();
 };
 
 //variables Globales
 //var servidor_wivivoColorines = 'http://srv001.liveshowsync.local';
 var servidor_wivivoColorines = 'http://aerowi.ddns.net';
-//alert(servidor_wivivoColorines);
 var webservice_wivivoColorines = servidor_wivivoColorines + '/olympus/'; 
 var servidor_leeColorines = webservice_wivivoColorines + 'lee.php';
 
@@ -85,8 +78,6 @@ function startColorines(){
         		repeColorines1Colorines = setInterval(function() {
         			if (esimpar === 0) {esimpar = 1;} else {esimpar = 0;}
             		colorseleccionadoColorines = coloresColorines[esimpar];
-                    //var indice = Math.floor(Math.random() * coloresColorines.length);
-            		//colorseleccionadoColorines = coloresColorines[indice];
             		document.getElementById("pantalla_colorines").style.backgroundColor = colorseleccionadoColorines;
 	        	}, startcolorinessetinterval);    
         	}
@@ -94,7 +85,6 @@ function startColorines(){
                 window.plugins.orientationLock.lock("landscape");
                 if (repeColorines1Colorines !== null) clearInterval(repeColorines1Colorines);
             	coloresColorines = ["#000000","#000001"];
-                //document.getElementById("pantalla_colorines").style.display = 'block';
                 document.getElementById("pantalla_colorines").style.backgroundPosition="top right";
                 document.getElementById("pantalla_colorines").style.backgroundRepeat="no-repeat";
                 document.getElementById("pantalla_colorines").style.backgroundSize="100%";
@@ -138,7 +128,6 @@ function stopColorines(){
 function cerrarColorines(){
     window.plugins.orientationLock.unlock();
     stopColorines();
-    //window.plugins.orientationLock.unlock();
     window.plugins.powerManagement.release();
     brightness.setBrightness(brillo, function(status){},function(status){});
 	window.location.href='index.html#tabstrip-show';
