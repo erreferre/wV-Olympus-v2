@@ -10,6 +10,7 @@ function onDeviceReadyColorines() {
     brightness.getBrightness(function(status){brillo = status;},function(status){});
     brightness.setBrightness('1.0', function(status){},function(status){});
     window.plugins.powerManagement.acquire();
+    window.plugins.orientationLock.unlock();
     startColorines();
 };
 
@@ -24,6 +25,7 @@ var startcolorinessettimeout = 10000;
 var startcolorinessetinterval = 200;
 
 //variables Colorines
+var colorines = 0;
 var colorColorines = null;
 var coloresColorines = null;
 var colorseleccionadoColorines = null;
@@ -49,6 +51,8 @@ function startColorines(){
 	$.getJSON(servidor_leeColorines)
 	.done(function(data) {  
         $.each(data, function(key, val) {
+            colorines = val.colorines;
+            if (colorines === 0) {cerrarColorines();}
             alertasactivadasColorines = val.alertasactivadas;
 	        intermitenciaColorines = val.intermitencia;
             startcolorinessettimeout = val.startColorinessetTimeout;
@@ -81,21 +85,6 @@ function startColorines(){
             		document.getElementById("pantalla_colorines").style.backgroundColor = colorseleccionadoColorines;
 	        	}, startcolorinessetinterval);    
         	}
-        	if (intermitenciaColorines === 3) {
-                window.plugins.orientationLock.lock("landscape");
-                if (repeColorines1Colorines !== null) clearInterval(repeColorines1Colorines);
-            	coloresColorines = ["#000000","#000001"];
-                document.getElementById("pantalla_colorines").style.backgroundPosition="top right";
-                document.getElementById("pantalla_colorines").style.backgroundRepeat="no-repeat";
-                document.getElementById("pantalla_colorines").style.backgroundSize="100%";
-                document.getElementById("pantalla_colorines").style.backgroundImage = "url('./imagenes/bengala2.gif')";
-                var espar = 0;
-                repeColorines1Colorines = setInterval(function() {
-                    if (espar === 0) {espar = 1;} else {espar = 0;}
-            		colorseleccionadoColorines = coloresColorines[espar];
-                    document.getElementById("pantalla_colorines").style.backgroundColor = colorseleccionadoColorines;
-	        	}, startcolorinessetinterval);
-        	}
     	});
         errordetectadoColorines = 0;
 	})
@@ -106,13 +95,13 @@ function startColorines(){
         }
         if (alertasactivadasColorines === 1){
             if (errornotificacionesColorines === 1){
-	            navigator.notification.alert("Parece que perdín a conexión... volve premer o botón",cerrarColorines(),"ERRO NA COMUNICACION", "OK");
 	        }
             errornotificacionesColorines = errornotificacionesColorines - 1;
         }
 	});
     repeColorines2Colorines = setTimeout(startColorines, startcolorinessettimeout);
 }
+
 // Cancela Colorines
 function stopColorines(){
     if (repeColorines1Colorines !== null) {
@@ -130,5 +119,5 @@ function cerrarColorines(){
     stopColorines();
     window.plugins.powerManagement.release();
     brightness.setBrightness(brillo, function(status){},function(status){});
-	window.location.href='index.html#tabstrip-show';
+	window.location.href='index.html#tabstrip-fogar';
 }

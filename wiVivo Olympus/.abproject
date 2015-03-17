@@ -3,10 +3,9 @@
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
   "AppIdentifier": "es.aerowi.wivivoolympus",
   "ProjectName": "wiVivo Olympus",
-  "FrameworkVersion": "3.2.0",
+  "FrameworkVersion": "3.7.0",
   "AndroidPermissions": [
     "android.permission.INTERNET",
-    "android.permission.MODIFY_AUDIO_SETTINGS",
     "android.permission.VIBRATE",
     "android.permission.WAKE_LOCK",
     "android.permission.WRITE_EXTERNAL_STORAGE",
@@ -35,17 +34,17 @@
     "ID_RESOLUTION_WXGA",
     "ID_RESOLUTION_HD720P"
   ],
-  "BundleVersion": "1.0",
-  "DisplayName": "wiVivo Olympus",
+  "BundleVersion": "2.0",
+  "DisplayName": "Olympus wiVivo",
   "iOSDisplayName": "",
-  "Description": "wiVivo Olympus",
+  "Description": "Olympus",
   "Author": "aerowi",
   "iOSDeviceFamily": [
     "1",
     "2"
   ],
   "iOSBackgroundMode": [],
-  "AndroidVersionCode": "1",
+  "AndroidVersionCode": "2",
   "WP8Requirements": [],
   "WP8Capabilities": [
     "ID_CAP_MEDIALIB_AUDIO",
@@ -61,5 +60,7 @@
   "WP8Publisher": "",
   "Framework": "Cordova",
   "projectVersion": "1",
-  "CordovaPluginVariables": {}
+  "CordovaPluginVariables": {},
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8PackageIdentityName": "1234Telerik.es.aerowi.wivivoolympus"
 }
