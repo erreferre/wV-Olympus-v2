@@ -15,8 +15,7 @@ function onDeviceReadyColorines() {
 };
 
 //variables Globales
-//var servidor_wivivoColorines = 'http://srv001.liveshowsync.local';
-var servidor_wivivoColorines = 'http://aerowi.ddns.net';
+var servidor_wivivoColorines = 'http://aerowi-olympus.ddns.net';
 var webservice_wivivoColorines = servidor_wivivoColorines + '/olympus/'; 
 var servidor_leeColorines = webservice_wivivoColorines + 'lee.php';
 
@@ -52,11 +51,11 @@ function startColorines(){
 	.done(function(data) {  
         $.each(data, function(key, val) {
             colorines = val.colorines;
-            if (colorines === 0) {cerrarColorines();}
             alertasactivadasColorines = val.alertasactivadas;
 	        intermitenciaColorines = val.intermitencia;
             startcolorinessettimeout = val.startColorinessetTimeout;
             startcolorinessetinterval = val.startColorinessetInterval;
+            if (colorines === 0) {cerrarColorines();}
             if (intermitenciaColorines === 0) {
         		coloresColorines = val.color1;    
                 if (repeColorines1Colorines !== null) clearInterval(repeColorines1Colorines);
