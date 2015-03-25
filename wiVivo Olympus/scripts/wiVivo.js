@@ -11,8 +11,7 @@ function onDeviceReady() {
 };
 
 //variables Globales
-//var servidor_wivivo = 'http://srv001.liveshowsync.local';
-var servidor_wivivo = 'http://aerowi.ddns.net';
+var servidor_wivivo = 'http://aerowi-olympus.ddns.net';
 var webservice_wivivo = servidor_wivivo + '/olympus/';
 
 var servidor_lee = webservice_wivivo + 'lee.php';
@@ -34,9 +33,9 @@ var colorines = 0;
 //ruta guardar fotos
 function onFileSystemSuccess(fileSystem) {
     //if (device.platform === 'Android'){
-    filePath = fileSystem.root.fullPath + '\/' + 'wiVivo_';
+    filePath = fileSystem.root.fullPath + '\/' + 'Olympus_';
     //} else {
-    //	filePath = fileSystem.root.fullPath+"\/"+'DavidAmorSelfie_';
+    //	filePath = fileSystem.root.fullPath+"\/"+'Olympus_';
     //}
 };
 
@@ -64,45 +63,42 @@ function startConsultaServidor() {
                 colorines = val.colorines;
                 startconsultaservidorsettimeout = val.startConsultaServidorsetTimeout;
                 if (comienzashow === 0) {
-                    newHTML1 = '<font color="black"><h2><p>TODAVÍA NON SE FIXERON SELFIES.</p></h2></font>';
+                    newHTML1 = '<font color="black"><h2><p>TODAVÍA NON COMEZOU O ESPECTACULO.</p></h2></font>';
                     document.getElementById("div-comienzaShow-selfie").innerHTML = newHTML1;
-                } else {
-                    if (tiposelfie !== 0) {
-                        var data2, val2, key2;
-                        var newHTMLselfie = '<button width="100%" class="boton-negro boton-centro boton-text-all-color"><h2>\
+                } else if (colorines !== 0) {
+                    window.location.href = 'colorines.html';
+                } else if (tiposelfie !== 0) {
+                    var data2, val2, key2;
+                    var newHTMLselfie = '<button width="100%" class="boton-negro boton-centro boton-text-all-color"><h2>\
                             Pouco a pouco irás vendo os selfies que os membros de Olympus fagan.\
-        	                Poderás gardalas con alta calidade no teu móbil pulsando sobre elas.</h2></button>';
-                        document.getElementById("div-comienzaShow-selfie2").innerHTML = newHTMLselfie;
-                        $.getJSON(servidor_selfie)
-                            .done(function (data2) {
-                                var newHTMLtmp1 = '';
-                                $.each(data2, function (key2, val2) {
-                                    foto = val.foto;
-                                    posicion = val.posicion;
-                                    newHTMLtmp1 = newHTMLtmp1 + '<button class="boton-negro boton-centro boton-text-all-color" onclick="descargaImagen(\'' + foto + '\');">';
-                                    newHTMLtmp1 = newHTMLtmp1 + '<img src="' + servidor_thumbs + foto + '" /></button>';
-                                });
-                                document.getElementById("tabstrip-selfie-fotos").innerHTML = newHTMLtmp1;
-                                errordetectado = 0;
-                            })
-                            .fail(function (jqxhr, textStatus, error) {
-                                if (errordetectado === 0) {
-                                    errordetectado = 1;
-                                    errornotificaciones = 8;
-                                }
-                                if (alertasactivadas === 1) {
-                                    if (errornotificaciones === 5) {
-                                        navigator.notification.alert("Espera un pouco, parece que non dou conectado con Internet.", irSelfie(), "ERRO NA COMUNICACION", "OK");
-                                    } else if (errornotificaciones === 1) {
-                                        navigator.notification.alert("Non dou conectado con Internet. Asegúrate de estar conectado.", irFogar(), "ERRO NA COMUNICACION", "OK");
-                                    }
-                                    errornotificaciones = errornotificaciones - 1;
-                                }
+        	                Poderás gardalas en HD no teu móbil pulsando sobre elas.</h2></button>';
+                    document.getElementById("div-comienzaShow-selfie2").innerHTML = newHTMLselfie;
+                    $.getJSON(servidor_selfie)
+                        .done(function (data2) {
+                            var newHTMLtmp1 = '';
+                            $.each(data2, function (key2, val2) {
+                                foto = val.foto;
+                                posicion = val.posicion;
+                                newHTMLtmp1 = newHTMLtmp1 + '<button class="boton-negro boton-centro boton-text-all-color" onclick="descargaImagen(\'' + foto + '\');">';
+                                newHTMLtmp1 = newHTMLtmp1 + '<img src="' + servidor_thumbs + foto + '" /></button>';
                             });
-                    }
-                    if (colorines !== 0) {
-                        window.location.href = 'colorines.html';
-                    }
+                            document.getElementById("tabstrip-selfie-fotos").innerHTML = newHTMLtmp1;
+                            errordetectado = 0;
+                        })
+                        .fail(function (jqxhr, textStatus, error) {
+                            if (errordetectado === 0) {
+                                errordetectado = 1;
+                                errornotificaciones = 8;
+                            }
+                            if (alertasactivadas === 1) {
+                                if (errornotificaciones === 5) {
+                                    navigator.notification.alert("Espera un pouco, parece que non dou conectado con Internet.", irSelfie(), "ERRO NA COMUNICACION", "OK");
+                                } else if (errornotificaciones === 1) {
+                                    navigator.notification.alert("Non dou conectado con Internet. Asegúrate de estar conectado.", irFogar(), "ERRO NA COMUNICACION", "OK");
+                                }
+                                errornotificaciones = errornotificaciones - 1;
+                            }
+                        });
                 }
             });
             errordetectado = 0;
