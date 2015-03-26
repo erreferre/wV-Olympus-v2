@@ -11,7 +11,7 @@ function onDeviceReady() {
 };
 
 //variables Globales
-var servidor_wivivo = 'http://aerowi-olympus.ddns.net';
+var servidor_wivivo = 'http://aerowi.ddns.net';
 var webservice_wivivo = servidor_wivivo + '/olympus/';
 
 var servidor_lee = webservice_wivivo + 'lee.php';
@@ -33,9 +33,9 @@ var colorines = 0;
 //ruta guardar fotos
 function onFileSystemSuccess(fileSystem) {
     //if (device.platform === 'Android'){
-    filePath = fileSystem.root.fullPath + '\/' + 'Olympus_';
+    filePath = fileSystem.root.fullPath + '\/';
     //} else {
-    //	filePath = fileSystem.root.fullPath+"\/"+'Olympus_';
+    //	filePath = fileSystem.root.fullPath+"\/";
     //}
 };
 
@@ -52,7 +52,7 @@ var alertasactivadas = 1;
 
 //funcion principal
 function startConsultaServidor() {
-    var newHTML1;
+    var newHTML1, newHTML2;
     var data, val, key;
     $.getJSON(servidor_lee)
         .done(function (data) {
@@ -65,21 +65,26 @@ function startConsultaServidor() {
                 if (comienzashow === 0) {
                     newHTML1 = '<font color="black"><h2><p>TODAVÍA NON COMEZOU O ESPECTACULO.</p></h2></font>';
                     document.getElementById("div-comienzaShow-selfie").innerHTML = newHTML1;
-                } else if (colorines !== 0) {
+                    newHTML2 = '';
+                    document.getElementById("div-comienzaShow-selfie2").innerHTML = newHTML2;
+                } else if (colorines == 1) {
                     window.location.href = 'colorines.html';
                 } else if (tiposelfie !== 0) {
                     var data2, val2, key2;
-                    var newHTMLselfie = '<button width="100%" class="boton-negro boton-centro boton-text-all-color"><h2>\
+                    newHTML1 = '';
+                    document.getElementById("div-comienzaShow-selfie").innerHTML = newHTML1;
+                    newHTML2 = '<button width="100%" class="boton-negro boton-centro boton-text-all-color"><h2>\
                             Pouco a pouco irás vendo os selfies que os membros de Olympus fagan.\
         	                Poderás gardalas en HD no teu móbil pulsando sobre elas.</h2></button>';
-                    document.getElementById("div-comienzaShow-selfie2").innerHTML = newHTMLselfie;
+                    document.getElementById("div-comienzaShow-selfie2").innerHTML = newHTML2;
                     $.getJSON(servidor_selfie)
                         .done(function (data2) {
                             var newHTMLtmp1 = '';
                             $.each(data2, function (key2, val2) {
-                                foto = val.foto;
-                                posicion = val.posicion;
-                                newHTMLtmp1 = newHTMLtmp1 + '<button class="boton-negro boton-centro boton-text-all-color" onclick="descargaImagen(\'' + foto + '\');">';
+                                foto = val2.foto;
+                                posicion = val2.posicion;
+                                //newHTMLtmp1 = newHTMLtmp1 + '<button class="boton-negro boton-centro boton-text-all-color" onclick="descargaImagen(\'' + foto + '\');">';
+                                newHTMLtmp1 = newHTMLtmp1 + '<button class="boton-negro boton-centro boton-text-all-color" onclick="downloadFile();">';
                                 newHTMLtmp1 = newHTMLtmp1 + '<img src="' + servidor_thumbs + foto + '" /></button>';
                             });
                             document.getElementById("tabstrip-selfie-fotos").innerHTML = newHTMLtmp1;
@@ -149,6 +154,7 @@ function descargaImagen(imagen) {
         },
         function (error) {
             document.getElementById("div-resultado-descarga").innerHTML = 'Houbo un erro, volve a descargala';
+            navigator.notification.alert(error.code + " " + rutaImagen + " ");
         });
 };
 
@@ -173,3 +179,56 @@ function irFogar() {
 function irSelfie() {
     window.location.href = 'index.html#tabstrip-selfie';
 };
+
+
+
+///////////////////////////////////////////////////
+function downloadFile() {
+    window.requestFileSystem(
+        LocalFileSystem.PERSISTENT, 0,
+        function onFileSystemSuccess2(fileSystem) {
+            fileSystem.root.getFile(
+                "dummy.html", {
+                    create: true,
+                    exclusive: false
+                },
+                function gotFileEntry(fileEntry) {
+                    var sPath = fileEntry.fullPath.replace("dummy.html", "");
+                    var fileTransfer = new FileTransfer();
+                    fileEntry.remove();
+
+                    fileTransfer.download(
+                        "http://www.w3.org/2011/web-apps-ws/papers/Nitobi.pdf",
+                        sPath + "theFile.pdf",
+                        function (theFile) {
+                            alert("download complete: " + theFile.toURI());
+                            showLink(theFile.toURI());
+                        },
+                        function (error) {
+                            alert("download error source " + error.source);
+                            alert("download error target " + error.target);
+                            alert("download error code: " + error.code);
+                        }
+                    );
+                },
+                fail);
+        },
+        fail);
+
+}
+
+function showLink(url) {
+    alert(url);
+    var divEl = document.getElementById("ready");
+    var aElem = document.createElement("a");
+    aElem.setAttribute("target", "_blank");
+    aElem.setAttribute("href", url);
+    aElem.appendChild(document.createTextNode("Ready! Click To Open."))
+    divEl.appendChild(aElem);
+
+}
+
+
+function fail(evt) {
+    alert(evt.target.error.code);
+}
