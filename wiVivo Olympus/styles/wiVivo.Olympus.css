@@ -3,8 +3,10 @@
     background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7)));
     background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
     background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
-    background-repeat: repeat;
-    background-position: 0 0;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 9.60000038146973px;
     font-weight: normal;
@@ -14,9 +16,13 @@
 }
 .km-ios7 .km-view .km-tabstrip .km-button {
     background-color: rgb(0, 0, 0);
-    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.4)),color-stop(.5, rgba(255,255,255,.5)),color-stop(1, rgba(255,255,255,.8)));
-    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8));
-    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8));
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.6)),color-stop(.5, rgba(255,255,255,.35)),color-stop(.5, rgba(255,255,255,.4)),color-stop(1, rgba(255,255,255,.6)));
+    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.6),rgba(255,255,255,.35) 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.6));
+    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.6),rgba(255,255,255,.35) 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.6));
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
     background-repeat: repeat;
     background-position: 0 0;
 }
@@ -25,22 +31,28 @@
     background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7)));
     background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
     background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
-    background-repeat: repeat;
-    background-position: 0 0;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
 }
 .km-ios7 .km-view .km-content {
     background-color: rgb(153, 153, 153);
-    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.4)),color-stop(.5, rgba(255,255,255,.5)),color-stop(1, rgba(255,255,255,.8))),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
-    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8)),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
-    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8)),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
-    background-repeat: repeat,repeat;
-    background-position: 0 0,0% 0%;
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7))),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
+    background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7)),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
+    background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7)),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
+    background-repeat-x: repeat, repeat;
+    background-repeat-y: repeat, repeat;
+    background-position-x: 0px, 0%;
+    background-position-y: 0px, 0%;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     font-size: 9.60000038146973px;
     font-weight: normal;
     font-style: normal;
     line-height: normal;
     text-shadow: none;
+    background-repeat: repeat,repeat;
+    background-position: 0 0,0% 0%;
 }
 .km-ios7 .km-view .km-content .km-listgroupinset .km-group-title {
     color: rgb(51, 51, 51);
@@ -50,8 +62,10 @@
     background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.4)),color-stop(.5, rgba(255,255,255,.5)),color-stop(1, rgba(255,255,255,.8)));
     background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8));
     background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8));
-    background-repeat: repeat;
-    background-position: 0 0;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
 }
 .km-ios7 .km-view .km-content .km-listgroupinset .km-group-title .km-text {
     color: rgb(0, 0, 0);
@@ -88,8 +102,123 @@
     background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7)));
     background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
     background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
-    background-repeat: repeat;
-    background-position: 0 0;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+.km-ios7 .km-view .km-tabstrip {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9.60000038146973px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+    text-shadow: none;
+}
+.km-ios7 .km-view .km-navbar {
+    background-color: rgb(0, 100, 181);
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7)));
+    background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
+    background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9.60000038146973px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+    text-shadow: none;
+}
+.km-ios7 .km-view .km-tabstrip .km-button {
+    background-color: rgb(0, 0, 0);
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.4)),color-stop(.5, rgba(255,255,255,.5)),color-stop(1, rgba(255,255,255,.8)));
+    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8));
+    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8));
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+.km-ios7 .km-view .km-content .km-list .km-state-active .km-listview-link {
+    background-color: rgb(0, 100, 181);
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7)));
+    background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
+    background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+.km-ios7 .km-view .km-content {
+    background-color: rgb(153, 153, 153);
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.4)),color-stop(.5, rgba(255,255,255,.5)),color-stop(1, rgba(255,255,255,.8))),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
+    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8)),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
+    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8)),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
+    background-repeat-x: repeat, repeat;
+    background-repeat-y: repeat, repeat;
+    background-position-x: 0px, 0%;
+    background-position-y: 0px, 0%;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-size: 9.60000038146973px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+    text-shadow: none;
+}
+.km-ios7 .km-view .km-content .km-listgroupinset .km-group-title {
+    color: rgb(51, 51, 51);
+}
+.km-ios7 .km-view .km-content .km-list > li {
+    background-color: rgb(153, 153, 153);
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.4)),color-stop(.5, rgba(255,255,255,.5)),color-stop(1, rgba(255,255,255,.8)));
+    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8));
+    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8));
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+.km-ios7 .km-view .km-content .km-listgroupinset .km-group-title .km-text {
+    color: rgb(0, 0, 0);
+}
+.km-ios7 .km-view .km-navbar .km-view-title > * {
+    color: rgb(0, 0, 0);
+}
+.km-ios7 .km-view .km-navbar .km-button .km-text {
+    color: rgb(229, 229, 229);
+}
+.km-ios7 .km-view .km-navbar .km-button {
+    background-color: rgb(0, 0, 0);
+}
+.km-ios7 .km-view .km-navbar .km-button.km-state-active {
+    background-color: rgb(0, 0, 0);
+}
+.km-ios7 .km-view .km-navbar .km-button.km-state-active .km-text {
+    color: rgb(229, 229, 229);
+}
+.km-ios7 .km-view .km-tabstrip .km-state-active span.km-icon {
+    color: rgb(0, 100, 181);
+}
+.km-ios7 .km-view .km-tabstrip .km-button .km-icon {
+    color: rgb(0, 0, 0);
+}
+.km-ios7 .km-view .km-tabstrip .km-button.km-state-active .km-text {
+    color: rgb(0, 100, 181);
+}
+.km-ios7 .km-view .km-tabstrip .km-button .km-text {
+    color: rgb(0, 0, 0);
+}
+.km-ios7 .km-view .km-tabstrip .km-button.km-state-active {
+    background-color: rgb(0, 0, 0);
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7)));
+    background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
+    background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
 }
 .km-ios7 .km-view .km-tabstrip {
     font-family: Arial, Helvetica, sans-serif;
@@ -104,8 +233,10 @@
     background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7)));
     background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
     background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
-    background-repeat: repeat;
-    background-position: 0 0;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 9.60000038146973px;
     font-weight: normal;
@@ -115,9 +246,13 @@
 }
 .km-ios .km-view .km-tabstrip .km-button {
     background-color: rgb(0, 0, 0);
-    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.4)),color-stop(.5, rgba(255,255,255,.5)),color-stop(1, rgba(255,255,255,.8))),-webkit-gradient(linear,0 50%,100% 50%,color-stop(0, rgba(0,0,0,.6)),color-stop(.03, rgba(0,0,0,0)),color-stop(.97, rgba(0,0,0,0)),color-stop(1, rgba(0,0,0,.6)));
-    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8)),-moz-linear-gradient(left,rgba(0,0,0,.6),rgba(0,0,0,0) 3%,rgba(0,0,0,0) 97%,rgba(0,0,0,.6));
-    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8)),-ms-linear-gradient(left,rgba(0,0,0,.6),rgba(0,0,0,0) 3%,rgba(0,0,0,0) 97%,rgba(0,0,0,.6));
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.6)),color-stop(.5, rgba(255,255,255,.35)),color-stop(.5, rgba(255,255,255,.4)),color-stop(1, rgba(255,255,255,.6))),-webkit-gradient(linear,0 50%,100% 50%,color-stop(0, rgba(0,0,0,.6)),color-stop(.03, rgba(0,0,0,0)),color-stop(.97, rgba(0,0,0,0)),color-stop(1, rgba(0,0,0,.6)));
+    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.6),rgba(255,255,255,.35) 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.6)),-moz-linear-gradient(0 50%,100% 50%,rgba(0,0,0,.6),rgba(0,0,0,0) 3%,rgba(0,0,0,0) 97%,rgba(0,0,0,.6));
+    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.6),rgba(255,255,255,.35) 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.6)),-ms-linear-gradient(0 50%,100% 50%,rgba(0,0,0,.6),rgba(0,0,0,0) 3%,rgba(0,0,0,0) 97%,rgba(0,0,0,.6));
+    background-repeat-x: repeat, repeat;
+    background-repeat-y: repeat, repeat;
+    background-position-x: 0px, 0px;
+    background-position-y: 0px, 0px;
     background-repeat: repeat,repeat;
     background-position: 0 0,0 0;
 }
@@ -126,22 +261,28 @@
     background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7)));
     background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
     background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
-    background-repeat: repeat;
-    background-position: 0 0;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
 }
 .km-ios .km-view .km-content {
     background-color: rgb(153, 153, 153);
-    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.4)),color-stop(.5, rgba(255,255,255,.5)),color-stop(1, rgba(255,255,255,.8))),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
-    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8)),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
-    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8)),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
-    background-repeat: repeat,repeat;
-    background-position: 0 0,0% 0%;
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7))),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
+    background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7)),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
+    background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7)),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
+    background-repeat-x: repeat, repeat;
+    background-repeat-y: repeat, repeat;
+    background-position-x: 0px, 0%;
+    background-position-y: 0px, 0%;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     font-size: 9.60000038146973px;
     font-weight: normal;
     font-style: normal;
     line-height: normal;
     text-shadow: none;
+    background-repeat: repeat,repeat;
+    background-position: 0 0,0% 0%;
 }
 .km-ios .km-view .km-content .km-listgroupinset .km-group-title {
     color: rgb(51, 51, 51);
@@ -151,8 +292,10 @@
     background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.4)),color-stop(.5, rgba(255,255,255,.5)),color-stop(1, rgba(255,255,255,.8)));
     background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8));
     background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8));
-    background-repeat: repeat;
-    background-position: 0 0;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
 }
 .km-ios .km-view .km-content .km-listgroupinset .km-group-title .km-text {
     color: rgb(0, 0, 0);
@@ -187,10 +330,12 @@
 .km-ios .km-view .km-tabstrip .km-button.km-state-active {
     background-color: rgb(0, 0, 0);
     background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7))),-webkit-gradient(linear,0 50%,100% 50%,color-stop(0, rgba(0,0,0,.6)),color-stop(.03, rgba(0,0,0,0)),color-stop(.97, rgba(0,0,0,0)),color-stop(1, rgba(0,0,0,.6)));
-    background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7)),-moz-linear-gradient(left,rgba(0,0,0,.6),rgba(0,0,0,0) 3%,rgba(0,0,0,0) 97%,rgba(0,0,0,.6));
-    background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7)),-ms-linear-gradient(left,rgba(0,0,0,.6),rgba(0,0,0,0) 3%,rgba(0,0,0,0) 97%,rgba(0,0,0,.6));
-    background-repeat: repeat,repeat;
-    background-position: 0 0,0 0;
+    background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7)),-moz-linear-gradient(0 50%,100% 50%,rgba(0,0,0,.6),rgba(0,0,0,0) 3%,rgba(0,0,0,0) 97%,rgba(0,0,0,.6));
+    background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7)),-ms-linear-gradient(0 50%,100% 50%,rgba(0,0,0,.6),rgba(0,0,0,0) 3%,rgba(0,0,0,0) 97%,rgba(0,0,0,.6));
+    background-repeat-x: repeat, repeat;
+    background-repeat-y: repeat, repeat;
+    background-position-x: 0px, 0px;
+    background-position-y: 0px, 0px;
 }
 .km-ios .km-view .km-tabstrip {
     font-family: Arial, Helvetica, sans-serif;
@@ -205,8 +350,10 @@
     background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7)));
     background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
     background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
-    background-repeat: repeat;
-    background-position: 0 0;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 9.60000038146973px;
     font-weight: normal;
@@ -216,9 +363,13 @@
 }
 .km-android .km-view .km-tabstrip .km-button {
     background-color: rgb(0, 0, 0);
-    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.4)),color-stop(.5, rgba(255,255,255,.5)),color-stop(1, rgba(255,255,255,.8)));
-    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8));
-    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8));
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.6)),color-stop(.5, rgba(255,255,255,.35)),color-stop(.5, rgba(255,255,255,.4)),color-stop(1, rgba(255,255,255,.6)));
+    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.6),rgba(255,255,255,.35) 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.6));
+    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.6),rgba(255,255,255,.35) 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.6));
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
     background-repeat: repeat;
     background-position: 0 0;
 }
@@ -227,22 +378,28 @@
     background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7)));
     background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
     background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
-    background-repeat: repeat;
-    background-position: 0 0;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
 }
 .km-android .km-view .km-content {
     background-color: rgb(153, 153, 153);
-    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.4)),color-stop(.5, rgba(255,255,255,.5)),color-stop(1, rgba(255,255,255,.8))),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
-    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8)),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
-    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8)),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
-    background-repeat: repeat,repeat;
-    background-position: 0 0,0% 0%;
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7))),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
+    background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7)),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
+    background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7)),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANtJREFUeNpiZGBgaGCAgNP////fysjIWAtkMzOQCJig9C8gPgZlf2UgAzBBDVkJdM17oGv4geyf5BjECMSCUEOUgexwIGYjQt9fIP4BxNxA/AWIb7IAiXygIZ+BNBeRYQP2ARDfBWKQD+yAWIUFKslLpA9eAfFyIH4PxCg+YCIxKDhAwQB1SShyMJBqEDeUtgYZii36iQWwpKGBKx0RC26iuYwsg/AmWiYSDMGbaFmISWxAfIRQomUhJrEBsTGhRMtCTGIjJtEyEZPYSClG8CY2Ug3CmdiIAQABBgCRyUSyesNqjgAAAABJRU5ErkJggg==);
+    background-repeat-x: repeat, repeat;
+    background-repeat-y: repeat, repeat;
+    background-position-x: 0px, 0%;
+    background-position-y: 0px, 0%;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     font-size: 9.60000038146973px;
     font-weight: normal;
     font-style: normal;
     line-height: normal;
     text-shadow: none;
+    background-repeat: repeat,repeat;
+    background-position: 0 0,0% 0%;
 }
 .km-android .km-view .km-content .km-listgroupinset .km-group-title {
     color: rgb(51, 51, 51);
@@ -252,8 +409,10 @@
     background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.4)),color-stop(.5, rgba(255,255,255,.5)),color-stop(1, rgba(255,255,255,.8)));
     background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8));
     background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.8));
-    background-repeat: repeat;
-    background-position: 0 0;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
 }
 .km-android .km-view .km-content .km-listgroupinset .km-group-title .km-text {
     color: rgb(0, 0, 0);
@@ -290,8 +449,10 @@
     background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, #fff),color-stop(.5, rgba(255,255,255,.2)),color-stop(.5, rgba(255,255,255,.3)),color-stop(1, rgba(255,255,255,.7)));
     background-image: -moz-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
     background-image: -ms-linear-gradient(50% 0,50% 100%,#fff,rgba(255,255,255,.2) 50%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.7));
-    background-repeat: repeat;
-    background-position: 0 0;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
 }
 .km-android .km-view .km-tabstrip {
     font-family: Arial, Helvetica, sans-serif;
