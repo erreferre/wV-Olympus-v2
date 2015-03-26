@@ -11,7 +11,7 @@ function onDeviceReady() {
 };
 
 //variables Globales
-var servidor_wivivo = 'http://aerowi.ddns.net';
+var servidor_wivivo = 'http://aerowi-olympus.ddns.net';
 var webservice_wivivo = servidor_wivivo + '/olympus/';
 
 var servidor_lee = webservice_wivivo + 'lee.php';
@@ -33,7 +33,8 @@ var colorines = 0;
 //ruta guardar fotos
 function onFileSystemSuccess(fileSystem) {
     //if (device.platform === 'Android'){
-    filePath = fileSystem.root.fullPath + '\/';
+    //filePath = fileSystem.root.fullPath + '\/';
+    filePath = fileSystem.root.toURL();
     //} else {
     //	filePath = fileSystem.root.fullPath+"\/";
     //}
@@ -83,8 +84,7 @@ function startConsultaServidor() {
                             $.each(data2, function (key2, val2) {
                                 foto = val2.foto;
                                 posicion = val2.posicion;
-                                //newHTMLtmp1 = newHTMLtmp1 + '<button class="boton-negro boton-centro boton-text-all-color" onclick="descargaImagen(\'' + foto + '\');">';
-                                newHTMLtmp1 = newHTMLtmp1 + '<button class="boton-negro boton-centro boton-text-all-color" onclick="downloadFile();">';
+                                newHTMLtmp1 = newHTMLtmp1 + '<button class="boton-negro boton-centro boton-text-all-color" onclick="descargaImagen(\'' + foto + '\');">';
                                 newHTMLtmp1 = newHTMLtmp1 + '<img src="' + servidor_thumbs + foto + '" /></button>';
                             });
                             document.getElementById("tabstrip-selfie-fotos").innerHTML = newHTMLtmp1;
@@ -135,11 +135,12 @@ function stopConsultaServidor() {
 function descargaImagen(imagen) {
     var fileTransfer = new FileTransfer();
     var uri = encodeURI(servidor_imagenes + imagen);
+    //uri = encodeURI("http://aerowi-olympus.ddns.net/olympus/lee.php");
     var rutaImagen = filePath + imagen;
     document.getElementById("div-resultado-descarga").innerHTML = 'Descargando a foto. Espera un intre...';
     fileTransfer.onprogress = function (progressEvent) {
         if (progressEvent.lengthComputable) {
-            var perc = Math.floor(progressEvent.loaded / progressEvent.total * 50);
+            var perc = Math.floor(progressEvent.loaded / progressEvent.total * 100);
             document.getElementById("div-progreso-descarga").innerHTML = perc + '% descargado.';
         } else {
             document.getElementById("div-progreso-descarga").innerHTML += '.';
@@ -154,7 +155,6 @@ function descargaImagen(imagen) {
         },
         function (error) {
             document.getElementById("div-resultado-descarga").innerHTML = 'Houbo un erro, volve a descargala';
-            navigator.notification.alert(error.code + " " + rutaImagen + " ");
         });
 };
 
@@ -179,56 +179,3 @@ function irFogar() {
 function irSelfie() {
     window.location.href = 'index.html#tabstrip-selfie';
 };
-
-
-
-///////////////////////////////////////////////////
-function downloadFile() {
-    window.requestFileSystem(
-        LocalFileSystem.PERSISTENT, 0,
-        function onFileSystemSuccess2(fileSystem) {
-            fileSystem.root.getFile(
-                "dummy.html", {
-                    create: true,
-                    exclusive: false
-                },
-                function gotFileEntry(fileEntry) {
-                    var sPath = fileEntry.fullPath.replace("dummy.html", "");
-                    var fileTransfer = new FileTransfer();
-                    fileEntry.remove();
-
-                    fileTransfer.download(
-                        "http://www.w3.org/2011/web-apps-ws/papers/Nitobi.pdf",
-                        sPath + "theFile.pdf",
-                        function (theFile) {
-                            alert("download complete: " + theFile.toURI());
-                            showLink(theFile.toURI());
-                        },
-                        function (error) {
-                            alert("download error source " + error.source);
-                            alert("download error target " + error.target);
-                            alert("download error code: " + error.code);
-                        }
-                    );
-                },
-                fail);
-        },
-        fail);
-
-}
-
-function showLink(url) {
-    alert(url);
-    var divEl = document.getElementById("ready");
-    var aElem = document.createElement("a");
-    aElem.setAttribute("target", "_blank");
-    aElem.setAttribute("href", url);
-    aElem.appendChild(document.createTextNode("Ready! Click To Open."))
-    divEl.appendChild(aElem);
-
-}
-
-
-function fail(evt) {
-    alert(evt.target.error.code);
-}
