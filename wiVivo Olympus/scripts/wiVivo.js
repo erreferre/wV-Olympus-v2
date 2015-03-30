@@ -64,20 +64,16 @@ function startConsultaServidor() {
                 colorines = val.colorines;
                 startconsultaservidorsettimeout = val.startConsultaServidorsetTimeout;
                 if (comienzashow === 0) {
-                    newHTML1 = '<font color="black"><h2><p>TODAVÍA NON COMEZOU O ESPECTACULO.</p></h2></font>';
+                    newHTML1 = '';
                     document.getElementById("div-comienzaShow-selfie").innerHTML = newHTML1;
-                    newHTML2 = '';
-                    document.getElementById("div-comienzaShow-selfie2").innerHTML = newHTML2;
                 } else if (colorines == 1) {
                     window.location.href = 'colorines.html';
                 } else if (tiposelfie !== 0) {
                     var data2, val2, key2;
-                    newHTML1 = '';
-                    document.getElementById("div-comienzaShow-selfie").innerHTML = newHTML1;
-                    newHTML2 = '<button width="100%" class="boton-negro boton-centro boton-text-all-color"><h2>\
+                    newHTML1 = '<button width="100%" class="boton-negro boton-centro boton-text-all-color"><h2>\
                             Pouco a pouco irás vendo os selfies que os membros de Olympus fagan.\
         	                Poderás gardalas en HD no teu móbil pulsando sobre elas.</h2></button>';
-                    document.getElementById("div-comienzaShow-selfie2").innerHTML = newHTML2;
+                    document.getElementById("div-comienzaShow-selfie").innerHTML = newHTML1;
                     $.getJSON(servidor_selfie)
                         .done(function (data2) {
                             var newHTMLtmp1 = '';
