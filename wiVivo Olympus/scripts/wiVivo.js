@@ -34,7 +34,7 @@ var colorines = 0;
 function onFileSystemSuccess(fileSystem) {
     //if (device.platform === 'Android'){
     //filePath = fileSystem.root.fullPath + '\/';
-    filePath = fileSystem.root.toURL();
+    filePath = fileSystem.root.toURL() + "Olympus2015/";
     //} else {
     //	filePath = fileSystem.root.fullPath+"\/";
     //}
